@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "soulscraft",
+  "version": "${version}",
+
+  "name": "SoulsCraft",
+  "description": "A Darksouls-like mod for Minecraft",
+  "authors": ["QuantumGoddess"],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/QuantumGoddess/soulscraft"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/soulscraft/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": ["net.quantumgoddess.soulscraft.Main"]
+  },
+  "mixins": ["soulscraft.mixins.json"],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.3",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
