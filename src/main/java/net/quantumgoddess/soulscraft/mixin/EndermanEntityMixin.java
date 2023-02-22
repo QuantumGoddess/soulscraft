@@ -9,7 +9,6 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.EndermanEntity;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.ZombieEntity;
 
 @Mixin(EndermanEntity.class)
 public class EndermanEntityMixin {
