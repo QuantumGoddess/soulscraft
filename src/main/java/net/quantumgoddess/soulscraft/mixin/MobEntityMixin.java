@@ -10,7 +10,7 @@ import net.minecraft.entity.mob.MobEntity;
 @Mixin(MobEntity.class)
 public abstract class MobEntityMixin {
 
-    @Inject(method = "isAffectedByDaylight()Z", at = @At("HEAD"), cancellable = true)
+    @Inject(at = @At("HEAD"), method = "isAffectedByDaylight()Z", cancellable = true)
     private void isAffectedByDaylight(CallbackInfoReturnable<Boolean> info) {
         info.setReturnValue(false);
     }
