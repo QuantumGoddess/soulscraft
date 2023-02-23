@@ -13,15 +13,9 @@ import net.minecraft.entity.mob.MobEntity;
 @Mixin(HostileEntity.class)
 public class HostileEntityMixin {
 
-	private static double movementSpeed = 0.23f;
-	private static double attackDamage = 4.0;
-	private static double armor = 4.0;
-	private static double health = 40.0;
-	private static double followRange = 70.0;
-
 	@Inject(at = @At("HEAD"), method = "createHostileAttributes()Lnet/minecraft/entity/attribute/DefaultAttributeContainer$Builder;", cancellable = true)
 	private static void createHostileAttributes(CallbackInfoReturnable<DefaultAttributeContainer.Builder> info) {
-		info.setReturnValue(MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_ATTACK_DAMAGE, attackDamage)
-				.add(EntityAttributes.GENERIC_MAX_HEALTH, health));
+		info.setReturnValue(MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4.0)
+				.add(EntityAttributes.GENERIC_MAX_HEALTH, 40.0));
 	}
 }

@@ -16,7 +16,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": ["net.quantumgoddess.soulscraft.Main"]
+    "main": ["net.quantumgoddess.soulscraft.SoulsCraft"]
   },
   "mixins": ["soulscraft.mixins.json"],
 
