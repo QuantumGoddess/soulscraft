@@ -12,6 +12,7 @@ public class SoulsCraft implements ModInitializer {
 
 		System.out.println("Hello Fabric world!");
 		SoulsCraftDefaultAttributeRegistry.registerAll();
+		// TODO modify attributes from screen
 
 	}
 }
