@@ -18,6 +18,8 @@ public class SoulsCraft implements ModInitializer {
 				SoulsCraftEntityAttributes.createCreeperAttributes());
 		FabricDefaultAttributeRegistry.register(EntityType.ENDERMAN,
 				SoulsCraftEntityAttributes.createEndermanAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.PLAYER,
+				SoulsCraftEntityAttributes.createPlayerAttributes());
 
 	}
 }
