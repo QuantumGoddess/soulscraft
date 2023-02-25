@@ -3,7 +3,12 @@
   "minVersion": "0.8",
   "package": "net.quantumgoddess.soulscraft.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["MobEntityMixin", "HostileEntityMixin", "CreeperEntityMixin"],
+  "mixins": [
+    "MobEntityMixin",
+    "HostileEntityMixin",
+    "CreeperEntityMixin",
+    "ArmorItemMixin"
+  ],
   "client": ["ExampleMixin"],
   "server": [],
   "injectors": {
