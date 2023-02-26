@@ -10,6 +10,7 @@ import net.minecraft.entity.mob.HostileEntity;
 public class SoulsCraftDefaultAttributeRegistry {
 
 	public static void registerAll() {
+		// overworld mobs
 		FabricDefaultAttributeRegistry.register(EntityType.ZOMBIE, createZombieAttributes());
 		FabricDefaultAttributeRegistry.register(EntityType.CREEPER, createCreeperAttributes());
 		FabricDefaultAttributeRegistry.register(EntityType.ENDERMAN, createEndermanAttributes());
