@@ -1,9 +1,7 @@
 package net.quantumgoddess.soulscraft;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.entity.EntityType;
-import net.quantumgoddess.soulscraft.entities.attributes.SoulsCraftEntityAttributes;
+import net.quantumgoddess.soulscraft.entity.attribute.SoulsCraftDefaultAttributeRegistry;
 
 public class SoulsCraft implements ModInitializer {
 	@Override
@@ -13,11 +11,7 @@ public class SoulsCraft implements ModInitializer {
 		// Proceed with mild caution.
 
 		System.out.println("Hello Fabric world!");
-		FabricDefaultAttributeRegistry.register(EntityType.ZOMBIE, SoulsCraftEntityAttributes.createZombieAttributes());
-		FabricDefaultAttributeRegistry.register(EntityType.CREEPER,
-				SoulsCraftEntityAttributes.createCreeperAttributes());
-		FabricDefaultAttributeRegistry.register(EntityType.ENDERMAN,
-				SoulsCraftEntityAttributes.createEndermanAttributes());
+		SoulsCraftDefaultAttributeRegistry.registerAll();
 
 	}
 }
