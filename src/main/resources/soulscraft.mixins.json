@@ -7,7 +7,9 @@
     "MobEntityMixin",
     "HostileEntityMixin",
     "CreeperEntityMixin",
-    "ArmorItemMixin"
+    "ArmorItemMixin",
+    "MiningToolItemMixin",
+    "SwordItemMixin"
   ],
   "client": ["ExampleMixin"],
   "server": [],
