@@ -6,6 +6,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.MobEntity;
+import net.minecraft.entity.mob.ZombieEntity;
 
 public class SoulsCraftDefaultAttributeRegistry {
 
@@ -17,6 +19,46 @@ public class SoulsCraftDefaultAttributeRegistry {
 		FabricDefaultAttributeRegistry.register(EntityType.PLAYER, createPlayerAttributes());
 		FabricDefaultAttributeRegistry.register(EntityType.WITCH, createWitchAttributes());
 		FabricDefaultAttributeRegistry.register(EntityType.SPIDER, createSpiderAttributes());
+
+		// nether mobs
+		FabricDefaultAttributeRegistry.register(EntityType.BLAZE, createBlazeAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.PIGLIN, createPiglinAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.PIGLIN_BRUTE, createPiglinBruteAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.GHAST, createGhastAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.HOGLIN, createHoglinAttributes());
+		FabricDefaultAttributeRegistry.register(EntityType.ZOMBIFIED_PIGLIN, createZombifiedPiglinAttributes());
+	}
+
+	public static DefaultAttributeContainer.Builder createZombifiedPiglinAttributes() {
+		return ZombieEntity.createZombieAttributes().add(EntityAttributes.ZOMBIE_SPAWN_REINFORCEMENTS, 0.0)
+				.add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0);
+	}
+
+	public static DefaultAttributeContainer.Builder createHoglinAttributes() {
+		return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0)
+				.add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
+				.add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.6f)
+				.add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 2.0).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 12.0);
+	}
+
+	public static DefaultAttributeContainer.Builder createGhastAttributes() {
+		return MobEntity.createMobAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0)
+				.add(EntityAttributes.GENERIC_FOLLOW_RANGE, 100.0);
+	}
+
+	public static DefaultAttributeContainer.Builder createPiglinBruteAttributes() {
+		return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 100.0)
+				.add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 14.0);
+	}
+
+	public static DefaultAttributeContainer.Builder createPiglinAttributes() {
+		return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_MAX_HEALTH, 32.0)
+				.add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.35f).add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 10.0);
+	}
+
+	public static DefaultAttributeContainer.Builder createBlazeAttributes() {
+		return HostileEntity.createHostileAttributes().add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 12.0)
+				.add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23f).add(EntityAttributes.GENERIC_FOLLOW_RANGE, 48.0);
 	}
 
 	public static DefaultAttributeContainer.Builder createSpiderAttributes() {
