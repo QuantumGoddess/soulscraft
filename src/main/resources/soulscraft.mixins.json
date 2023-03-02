@@ -9,7 +9,8 @@
     "CreeperEntityMixin",
     "ArmorItemMixin",
     "MiningToolItemMixin",
-    "SwordItemMixin"
+    "SwordItemMixin",
+    "FoodComponentAccessor"
   ],
   "client": ["ExampleMixin"],
   "server": [],
