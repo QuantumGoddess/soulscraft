@@ -18,6 +18,7 @@ public class SoulsCraft implements ModInitializer {
 		// Proceed with mild caution.
 		LOGGER.info("Initializing SoulsCraft Mod");
 		SoulsCraftDefaultAttributeRegistry.registerAll();
-		LOGGER.info(FoodItemModifier.modifyAll() ? "Modified food items" : "Could not modify food items");
+		LOGGER.info(
+				FoodItemModifier.modifyAll() ? "Modified all registered food items" : "Could not modify food items");
 	}
 }
