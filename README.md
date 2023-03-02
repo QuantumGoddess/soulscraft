@@ -22,6 +22,7 @@ The following things are planned for future releases:
 - Campfire gui to access level up system.
 - Collect souls from mobs to level up.
 - Reworked attributes for vanilla bosses.
+- Datapack functionality to overwrite all default attributes.
 
 ## Compatible Minecraft Versions
 
